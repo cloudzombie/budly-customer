@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="horizontal"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="90dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="5dip"
+        android:src="@drawable/generic_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dip"
+        android:layout_toLeftOf="@+id/ic_check"
+        android:layout_toRightOf="@+id/thumb"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:text="Romance"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rate_start_demo" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_check"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:padding="8dip"
+        android:src="@drawable/check" />
+
+</RelativeLayout>

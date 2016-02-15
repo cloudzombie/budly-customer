@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:weightSum="1136"
+    tools:context="com.budly.android.CustomerApp.user.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:weightSum="640" >
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:background="@drawable/bg_overlay"
+            android:padding="8dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="440"
+            android:padding="8dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/budly_logo2" />
+
+        <ImageView
+            android:id="@+id/btn_rigt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="896"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="896" >
+
+        <RelativeLayout
+            android:id="@+id/service_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="170"
+            android:orientation="horizontal"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
+
+            <ImageView
+                android:id="@+id/thumb"
+                android:layout_width="94dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:padding="5dip"
+                android:src="@drawable/thumb1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dip"
+                android:layout_toLeftOf="@+id/ic_check"
+                android:layout_toRightOf="@+id/thumb"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="1"
+                    android:text="Romance"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rate_start_demo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_mile"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="right|top"
+                android:paddingRight="8dip"
+                android:paddingTop="16dip"
+                android:text="12 Miles" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="75"
+            android:background="@color/main_bg" >
+
+            <TextView
+                android:id="@+id/txt_menu_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f1f0ec"
+                android:gravity="center"
+                android:text="Menu Item 1"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="651"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_des"
+                android:layout_width="match_parent"
+                android:padding="8dip"
+                android:layout_height="wrap_content" />
+
+            <View android:layout_height="1px" android:layout_width="match_parent" android:background="#ccc"/>
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="Total"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dip"
+                    android:text="$0.0"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="140"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="140" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="32" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="76"
+            android:background="@drawable/btn_bg_blue_white"
+            android:text="Add to order"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="32" />
+    </LinearLayout>
+
+</LinearLayout>

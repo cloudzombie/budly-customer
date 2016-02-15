@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1136">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:background="@color/main_bg"
+        android:weightSum="640"
+        android:layout_weight="100">
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:background="@drawable/bg_overlay"
+            android:padding="8dip"
+            android:src="@drawable/ic_menu"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="180"
+            android:clickable="true"
+            android:id="@+id/btn_CompletedOrders" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Completed Orders"
+                android:id="@+id/textView4"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/abs__background_holo_light"
+                android:singleLine="false"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="180"
+            android:paddingBottom="8sp"
+            android:clickable="true"
+            android:id="@+id/btn_activeOrders" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Active Orders"
+                android:id="@+id/textView7"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="@color/abs__background_holo_light"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="3"
+                android:id="@+id/orderCounttextView"
+                android:layout_gravity="center_horizontal|top"
+                android:textColor="@color/progress_default_progress_color"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="180"
+            android:background="@color/progress_default_progress_color"
+            android:id="@+id/btn_orderDetails"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Order"
+                android:id="@+id/textView9"
+                android:layout_gravity="center"
+                android:textColor="@color/abs__background_holo_light"
+                android:gravity="center"
+                android:paddingBottom="8sp"
+                android:layout_marginBottom="5sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Details"
+                android:id="@+id/textView10"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center"
+                android:textColor="@color/abs__background_holo_light"
+                android:paddingBottom="8sp"
+                android:layout_marginTop="8sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1036"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="1036" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="100"
+            android:background="#ff333333"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Active Orders"
+                android:textSize="22sp"
+                android:textColor="@color/abs__background_holo_light" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:dividerHeight="0px"
+            android:divider="@null"
+            android:layout_weight="936"
+            android:background="#ffffff" />
+    </LinearLayout>
+</LinearLayout>

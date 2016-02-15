@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transaction_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:paddingBottom="2dip"
+    android:paddingTop="2dip"
+    android:weightSum="5" >
+
+    <FrameLayout
+        android:layout_width="80dip"
+        android:layout_height="80dip">
+
+        <view
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            class="com.budly.android.CustomerApp.td.widget.ProgressButton"
+            android:id="@+id/prog_view"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/progMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:text="22"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/progTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:text="Minutes"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer"
+            android:id="@+id/txt_customer"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:text="#2334 - 2323 Green St., Los Angeles"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:maxLines="1"
+                android:text="22 minute drive"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_order"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dip"
+                android:text="Order# 1334"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

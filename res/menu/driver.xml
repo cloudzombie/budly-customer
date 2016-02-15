@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/manager_suppliers"
+        android:showAsAction="ifRoom"
+        android:title="Manager Suppliers"/>
+    <item
+        android:id="@+id/update_profile"
+        android:title="Update profile"/>
+    <item
+        android:id="@+id/delivery"
+        android:title="Deliveries"/>
+
+</menu>

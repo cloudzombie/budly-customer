@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.budly.android.CustomerApp.driver.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:background="@color/main_bg"
+        android:weightSum="11">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:padding="2dip"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="NOT VERIFIED"
+                android:textColor="#a13644"
+                android:textSize="18sp"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:id="@+id/nameView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textSize="18sp"
+                android:textColor="@color/abs__background_holo_light"
+                android:autoText="true"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dip"
+                android:gravity="center_horizontal|top"
+                android:maxLines="2"
+                android:text="--"
+                android:textSize="18sp"
+                android:textColor="@color/abs__background_holo_light"
+                android:autoText="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_supplier_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#ff333333"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dip"
+        android:text="Shop: "
+        android:textColor="@color/abs__background_holo_light"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100" />
+
+    <TextView
+        android:id="@+id/txt_total_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#ff989898"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dip"
+        android:text="Total: $0.00"
+        android:textColor="@color/abs__background_holo_light"
+        android:textSize="18sp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/txt_time_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Estimated drive time"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:background="@color/main_bg"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0" >-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dip"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--&lt;!&ndash;<com.budly.android.CustomerApp.td.widget.AspectRatioImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/license"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:adjustViewBounds="true" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dp"
+        android:layout_gravity="bottom"
+        android:background="@color/main_bg">
+
+        <ImageView
+            android:id="@+id/btn_deny"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="5dip"
+            android:src="@drawable/btn_deny"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btn_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dip"
+            android:src="@drawable/btn_accept"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

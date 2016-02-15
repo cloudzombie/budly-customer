@@ -1,0 +1,273 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:weightSum="1136"
+    tools:context="com.budly.android.CustomerApp.user.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:weightSum="640" >
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="440"
+            android:padding="8dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/budly_logo2" />
+
+        <ImageView
+            android:id="@+id/btn_rigt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1036"
+        android:orientation="horizontal"
+        android:weightSum="640" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="30" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="580"
+            android:orientation="vertical"
+            android:weightSum="1036" >
+
+            <EditText
+                android:id="@+id/txt_password"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:inputType="textWebPassword"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_password_again"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Password again"
+                android:imeOptions="actionNext"
+                android:inputType="textWebPassword"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="First Name"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Last Name"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Address"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_city"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="City"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_state"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="State/Prov"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_zip"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:hint="Zip/Postal code"
+                android:imeOptions="actionDone"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" />
+
+            <EditText
+                android:id="@+id/txt_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="75"
+                android:background="@drawable/bg_white_rounded"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="#number"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="110"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="85"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Next" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="10" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="30" />
+    </LinearLayout>
+
+</LinearLayout>

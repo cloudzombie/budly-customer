@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_bg">#4990cd</color>
+    <color name="bg_white_overlay">#20ffffff</color>
+    <color name="bg_gray">#f1f0ec</color>
+    <color name="progress_default_circle_color">#f1f0ec</color>
+    <color name="progress_default_progress_color">#66cc33</color>
+
+</resources>

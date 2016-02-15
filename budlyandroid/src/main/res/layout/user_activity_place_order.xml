@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:weightSum="1136"
+    tools:context="com.budly.android.CustomerApp.user.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:weightSum="640" >
+
+        <ImageView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_menu"
+            android:scaleType="fitCenter"
+            android:padding="8dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_overlay"
+            android:layout_weight="100" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="440"
+            android:padding="8dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/budly_logo2" />
+
+        <ImageView
+            android:id="@+id/btn_rigt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1036"
+        android:orientation="horizontal"
+        android:weightSum="640" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="118" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="404"
+            android:orientation="vertical"
+            android:weightSum="1036" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="427" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="182"
+                android:background="@drawable/btn_bg_white_5"
+                android:text="Place Order"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="427" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="v0.0.0"
+                android:id="@+id/txt_version_customer"
+                android:layout_gravity="right"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="118" />
+
+    </LinearLayout>
+
+</LinearLayout>

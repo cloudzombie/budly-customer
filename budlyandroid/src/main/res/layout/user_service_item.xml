@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="horizontal"
+    android:paddingBottom="2dip"
+    android:paddingTop="2dip" >
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="94dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="5dip"
+        android:src="@drawable/generic_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dip"
+        android:layout_toLeftOf="@+id/txt_mile"
+        android:layout_toRightOf="@+id/thumb"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:text="Romance"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rate_start_demo" />
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_marginTop="8dip"
+            android:text="Select"
+            android:textSize="14sp"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_blue_white"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_mile"
+        android:layout_width="80dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="right|top"
+        android:text="12 Miles"
+        android:padding="8dip"/>
+
+</RelativeLayout>

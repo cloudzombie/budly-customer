@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="horizontal"
+    android:paddingBottom="2dip"
+    android:paddingTop="2dip" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="94dip"
+        android:layout_height="match_parent"
+        android:padding="10dip"
+        android:text="Mike"
+        android:textSize="22dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_center"
+        android:layout_width="130dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dip"
+        android:layout_toRightOf="@+id/title"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:id="@+id/on_time_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:text="On Time Rank"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/value_on_time_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:paddingLeft="5dip"
+            android:text="87%"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/btn_bg_blue_white"
+            android:text="Select"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_toRightOf="@+id/layout_center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="right|top"
+        android:orientation="vertical"
+        android:padding="8dip" >
+
+        <TextView
+            android:id="@+id/delay_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delay Time"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/value_delay_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="27 min"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</RelativeLayout>

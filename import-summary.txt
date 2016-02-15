@@ -1,0 +1,90 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From actionbarsherlock:
+* README.md
+* actionbarsherlock.iml
+* build.gradle
+* pom.xml
+From budly-android:
+* .gitignore
+* ic_launcher-web.png
+* proguard-project.txt
+From google-play-services_lib:
+* README.txt
+* google-play-services_lib.iml
+* production/
+* production/google-play-services_lib/
+* production/google-play-services_lib/android/
+* production/google-play-services_lib/android/UnusedStub.class
+* production/google-play-services_lib/com/
+* production/google-play-services_lib/com/google/
+* production/google-play-services_lib/com/google/android/
+* production/google-play-services_lib/com/google/android/gms/
+* production/google-play-services_lib/com/google/android/gms/BuildConfig.class
+* production/google-play-services_lib/com/google/android/gms/R$attr.class
+* production/google-play-services_lib/com/google/android/gms/R$color.class
+* production/google-play-services_lib/com/google/android/gms/R$drawable.class
+* production/google-play-services_lib/com/google/android/gms/R$id.class
+* production/google-play-services_lib/com/google/android/gms/R$string.class
+* production/google-play-services_lib/com/google/android/gms/R$styleable.class
+* production/google-play-services_lib/com/google/android/gms/R.class
+* proguard.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In actionbarsherlock:
+* AndroidManifest.xml => actionbarsherlock/src/main/AndroidManifest.xml
+* libs/android-support-v4.jar => actionbarsherlock/libs/android-support-v4.jar
+* lint.xml => actionbarsherlock/lint.xml
+* res/ => actionbarsherlock/src/main/res/
+* src/ => actionbarsherlock/src/main/java/
+In google-play-services_lib:
+* AndroidManifest.xml => googleplayservices_lib/src/main/AndroidManifest.xml
+* libs/google-play-services.jar => googleplayservices_lib/libs/google-play-services.jar
+* res/ => googleplayservices_lib/src/main/res/
+* src/ => googleplayservices_lib/src/main/java/
+In budly-android:
+* AndroidManifest.xml => budlyandroid/src/main/AndroidManifest.xml
+* assets/ => budlyandroid/src/main/assets/
+* libs/basic-http-client-android-0.88.jar => budlyandroid/libs/basic-http-client-android-0.88.jar
+* libs/gcm.jar => budlyandroid/libs/gcm.jar
+* libs/httpclient-4.2.5.jar => budlyandroid/libs/httpclient-4.2.5.jar
+* libs/httpcore-4.2.4.jar => budlyandroid/libs/httpcore-4.2.4.jar
+* libs/httpmime-4.2.5.jar => budlyandroid/libs/httpmime-4.2.5.jar
+* libs/universal-image-loader-1.8.6-with-sources.jar => budlyandroid/libs/universal-image-loader-1.8.6-with-sources.jar
+* res/ => budlyandroid/src/main/res/
+* src/ => budlyandroid/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

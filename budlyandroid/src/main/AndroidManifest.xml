@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.budly"
+    android:versionCode="1"
+    android:versionName="1.0.11" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:required="false" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <!-- <uses-permission -->
+    <!-- android:name="android.permission.WAKE_LOCK" -->
+    <!-- android:required="false" /> -->
+
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE"
+        android:required="false" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".android.CustomerApp.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Budly.NoActionBar" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCklLCIc7aLaNBCpjXnTNwZ74M4Dv_XFek" />
+         <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity
+            android:name=".android.CustomerApp.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".android.CustomerApp.TransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.ImageViewActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".android.CustomerApp.driver.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".android.CustomerApp.driver.ProfilePictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ProfilePictureUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.StatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ProfileUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.AddSupplierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ManagerSupplierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.UnavailableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.HasOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.CompletedOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ActiveOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.SubmitOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".android.CustomerApp.driver.OrderLostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.OrderCompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.DriverConfirmActivity"
+            android:launchMode="singleTask"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.driver.OrderDetailActivity"
+            android:screenOrientation="portrait" /> <!-- android:theme="@style/Dialog" /> -->
+        <activity
+            android:name=".android.CustomerApp.driver.OrderCancelledActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".android.CustomerApp.user.MainActivity" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".android.CustomerApp.user.RecomendationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.RecomendationUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureLicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureRecomendationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureRecomendationUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfilePictureLicenseUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.PlaceOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ProfileUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.LocationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".android.CustomerApp.user.ListServiceInAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ItemOfMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.MenuOfServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.WaitDriversActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.OrderProcessingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.NoDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.OneDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.ListDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.OrderConfirmedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.CustomerApp.user.RateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".android.CustomerApp.PasswordResetActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:required="false" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.budly.android.CustomerApp" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".android.CustomerApp.GCMIntentService" />
+
+        <activity
+            android:name=".android.CustomerApp.TransactionDetailActivity"
+            android:label="@string/title_activity_transaction_detail" >
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="92e4422835645715191656433f23a08a4c9e54af" />
+    </application>
+
+</manifest>
